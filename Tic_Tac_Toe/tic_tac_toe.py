@@ -49,9 +49,9 @@ def AI_move(board):
             board_copy[i] = 'O'
             if isWinner(board_copy, "O"):
                 board[i] = 'O'
-                drawBoard(board)
-                print("The computer has beaten you!")
-                print("Game over!")
+                # drawBoard(board)
+                # print("The computer has beaten you!")
+                # print("Game over!")
                 return False
     #try to block
     for i in range(1, 10):
@@ -73,6 +73,7 @@ def AI_move(board):
     if len(available_moves) > 0:
         i = random.choice(available_moves)
         board[i] = 'O'
+        return True
     else:
         for i in [2, 4, 6, 8]:
             if isSpaceFree(board, i):
@@ -80,6 +81,7 @@ def AI_move(board):
         if len(available_moves) > 0:
             i = random.choice(available_moves)
             board[i] = 'O'
+            return True
 
 
 

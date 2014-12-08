@@ -21,6 +21,7 @@ while game_not_over:
 
     elif current_turn == "computer":
         if tic_tac_toe.AI_move(board) is False:
+            tic_tac_toe.drawBoard(board)
             print("The AI won the game!")
             game_not_over = False
         else:
